@@ -24,16 +24,11 @@ namespace GMPR2512Lesson04Scripting01
         void Update()
         {
             _seconds += Time.deltaTime;
-            Debug.Log($"This scene has been running for {_seconds:f2} seconds.");
+        }
+
+        void OnTriggerEnter2D(Collider2D collider)
+        {
+            Debug.Log("An object has entered the death zone!");
         }
     }
-
-        void OnTriggerEnter2d(Collider2D collison)
-        {
-            if (other.CompareTag("Player"))
-            {
-                Debug.Log("Player has entered the death zone!");
-                // Here you can add logic to handle the player's death, e.g., respawn or reduce health
-            }
-        }
 }
