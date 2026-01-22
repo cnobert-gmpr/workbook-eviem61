@@ -29,6 +29,9 @@ namespace GMPR2512Lesson04Scripting01
         void OnTriggerEnter2D(Collider2D collider)
         {
             Debug.Log("An object has entered the death zone!");
+
+            Destroy(collider.gameObject.GetComponent<Rigidbody2D>());
+
         }
     }
 }
